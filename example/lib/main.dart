@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
   Future<void> initPlatformState() async {
     String udid;
     try {
-      udid = await FlutterUdid.udid;
+      udid = await FlutterUdid.getUdid();
     } on PlatformException {
       udid = 'Failed to get UDID.';
     }
